@@ -1,0 +1,121 @@
+.section-subtitle {
+  font-size: 1.15rem;
+  color: #6c63ff;
+  font-weight: 500;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.01em;
+}
+
+.features-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e0e7ef 100%);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 3rem;
+}
+
+.features-section .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  min-height: 340px;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border: none;
+  border-radius: 22px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  background: rgba(255,255,255,0.85);
+  box-shadow: 0 8px 32px rgba(60,72,100,0.10), 0 1.5px 6px rgba(60,72,100,0.04);
+  backdrop-filter: blur(6px) saturate(1.1);
+  -webkit-backdrop-filter: blur(6px) saturate(1.1);
+  margin-bottom: 2rem;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 16px 40px rgba(102,99,255,0.13);
+}
+
+.feature-card .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+  padding: 0 1.2rem;
+}
+
+.feature-icon {
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #6c63ff, #007bff);
+  border-radius: 50%;
+  color: white;
+  font-size: 2.2rem;
+  box-shadow: 0 4px 16px rgba(102,99,255,0.13);
+  transition: background 0.3s, transform 0.3s;
+}
+
+.feature-card:hover .feature-icon {
+  background: linear-gradient(135deg, #007bff, #6c63ff);
+  transform: scale(1.08) rotate(-6deg);
+}
+
+.feature-card .card-title {
+  margin-top: 1.2rem;
+  margin-bottom: 0.8rem;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #212529;
+}
+
+.feature-card .card-text {
+  text-align: center;
+  margin-bottom: 0;
+  color: #6c757d;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  .section-subtitle {
+    font-size: 1rem;
+  }
+  .feature-card {
+    min-height: 260px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 16px;
+  }
+  .feature-card .card-body {
+    padding: 0 0.5rem;
+  }
+  .feature-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+} 

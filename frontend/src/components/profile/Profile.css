@@ -1,0 +1,126 @@
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ef 100%);
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+/* 
+.profile-main-col {
+  min-width: 0;
+  flex: 1 1 0%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+  padding: 0;
+  margin-left: 280px;
+} */
+
+.feed-main {
+  margin-left: 280px;
+  width: 100%;
+  padding: 32px 0 32px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+}
+
+.post-section {
+  width: 100%;
+  max-width: 680px;
+  background: rgba(255,255,255,0.98);
+  padding: 32px 36px 24px 36px;
+  border-radius: 22px;
+  box-shadow: 0 8px 32px rgba(60,72,100,0.10), 0 1.5px 6px rgba(60,72,100,0.04);
+  margin-bottom: 32px;
+  animation: slideIn 0.4s cubic-bezier(0.4,0,0.2,1);
+  border: 1.5px solid #f0f4fa;
+  transition: box-shadow 0.3s, transform 0.3s, border 0.2s;
+}
+
+.post-section:not(:last-child) {
+  border-bottom: 1.5px solid #f0f4fa;
+  margin-bottom: 36px;
+}
+
+.weather-widget {
+  position: fixed;
+  bottom: 36px;
+  right: 36px;
+  z-index: 999;
+  max-width: 340px;
+  width: 100%;
+  border-radius: 22px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.75);
+  box-shadow: 0 8px 32px rgba(26,115,232,0.10), 0 2px 8px rgba(60,72,100,0.08);
+  backdrop-filter: blur(10px);
+  border: 1.5px solid #e3e9f7;
+  transition: box-shadow 0.3s, background 0.3s, transform 0.3s, border 0.2s;
+}
+
+.post-section, .weather-widget {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+.post-section h2, .post-section h3, .post-section h4 {
+  color: #1a237e;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+.post-section p, .weather-widget p, .post-section .user-name, .post-section .user-username {
+  color: #3a3a3a;
+  font-size: 1.05rem;
+  font-weight: 400;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.post-fade-in {
+  animation: slideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  opacity: 0;
+}
+
+@media (max-width: 1200px) {
+  .feed-main, .profile-main-col {
+    margin-left: 0;
+    padding: 24px 0 24px 0;
+  }
+}
+@media (max-width: 992px) {
+  .feed-main, .profile-main-col {
+    margin-left: 0;
+    padding: 16px 0 16px 0;
+  }
+  .weather-widget {
+    position: static;
+    margin: 20px auto 0 auto;
+    width: 100%;
+    max-width: 98vw;
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(26,115,232,0.10);
+    background: rgba(255,255,255,0.97);
+    backdrop-filter: none;
+  }
+}
+@media (max-width: 768px) {
+  .feed-main, .profile-main-col {
+    padding: 8px 0 8px 0;
+  }
+  .post-section {
+    max-width: 99vw;
+    padding: 14px 4px;
+    border-radius: 12px;
+  }
+  .weather-widget {
+    border-radius: 12px;
+    margin: 10px auto 0 auto;
+  }
+}
+@media (max-width: 1000px) {
+  .profile-main-col {
+    margin-left: 0;
+  }
+}

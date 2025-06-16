@@ -1,0 +1,213 @@
+#postbox {
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(60,72,100,0.10);
+  padding: 24px 20px;
+  transition: box-shadow 0.3s, transform 0.3s;
+  animation: postFadeIn 0.6s cubic-bezier(0.4,0,0.2,1) both;
+}
+
+/* #postbox:hover {
+  box-shadow: 0 12px 36px rgba(26,115,232,0.13), 0 4px 16px rgba(60,72,100,0.10);
+  transform: translateY(-4px) scale(1.01);
+} */
+
+.post-box {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.post-box:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+.post-box .card-body {
+  padding: 1.5rem;
+}
+
+.post-input {
+  border: 1px solid #e2e8f0;
+  resize: none;
+  padding: 1rem;
+  font-size: 1.1rem;
+  background-color: #fff;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  min-height: 120px;
+}
+
+.post-input:focus {
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+  border-color: #007bff;
+  background-color: #fff;
+}
+
+.post-input::placeholder {
+  color: #a0aec0;
+}
+
+.upload-area {
+  border: 2px dashed #e2e8f0;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #f8fafc;
+  margin: 1rem 0;
+}
+
+.upload-area:hover {
+  border-color: #007bff;
+  background-color: rgba(0, 123, 255, 0.02);
+}
+
+.upload-area.dragging {
+  border-color: #007bff;
+  background-color: rgba(0, 123, 255, 0.05);
+}
+
+.upload-icon {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+.upload-text {
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+}
+
+.upload-hint {
+  color: #718096;
+  font-size: 0.875rem;
+}
+
+.image-preview {
+  position: relative;
+  display: inline-block;
+  margin: 1rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.preview-img {
+  max-height: 200px;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.preview-img:hover {
+  transform: scale(1.02);
+}
+
+.remove-image {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: #dc3545;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.remove-image:hover {
+  background-color: #dc3545;
+  color: white;
+  transform: scale(1.1);
+}
+
+.error-message {
+  color: #dc3545;
+  background-color: rgba(220, 53, 69, 0.1);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.submit-button {
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  border-radius: 50px;
+  background: linear-gradient(45deg, #007bff, #6610f2);
+  border: none;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+}
+
+.submit-button:disabled {
+  background: #e2e8f0;
+  transform: none;
+  box-shadow: none;
+}
+
+.loading-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #postbox {
+    max-width: 98vw;
+    padding: 14px 4px;
+    border-radius: 10px;
+  }
+
+  .post-box {
+    margin: 1rem;
+    border-radius: 12px;
+  }
+
+  .post-box .card-body {
+    padding: 1rem;
+  }
+
+  .upload-area {
+    padding: 1.5rem;
+  }
+
+  .preview-img {
+    max-height: 150px;
+  }
+}
